@@ -1,0 +1,45 @@
+---
+# Recommended clang-tidy configuration for FourSeas embedded project
+# Focus: Essential bug-catching, memory safety, and consistent naming.
+---
+# Use wildcards for broader, more maintainable check coverage.
+# The leading '-' disables a specific check from an enabled group.
+Checks: >-
+  bugprone-*,
+  clang-analyzer-*,
+  -bugprone-suspicious-enum-usage,
+  readability-identifier-naming
+  modernize-*
+
+WarningsAsErrors: ''
+
+HeaderFilterRegex: '^(src|include)/.*'
+
+# Tells clang-tidy to find and use the .clang-format file for style-related fix-its.
+FormatStyle: file
+
+# Options for the 'readability-identifier-naming' check.
+# This configuration enforces a style similar to Google's C++ Style Guide.
+CheckOptions:
+  - key: readability-identifier-naming.ClassCase
+    value: CamelCase
+  - key: readability-identifier-naming.StructCase
+    value: CamelCase
+  - key: readability-identifier-naming.FunctionCase
+    value: camelBack
+  - key: readability-identifier-naming.MethodCase
+    value: camelBack
+  - key: readability-identifier-naming.VariableCase
+    value: lower_case
+  - key: readability-identifier-naming.ParameterCase
+    value: lower_case
+  - key: readability-identifier-naming.MemberCase
+    value: lower_case
+  - key: readability-identifier-naming.PrivateMemberSuffix
+    value: '_'
+  - key: readability-identifier-naming.ConstantCase
+    value: CamelCase
+  - key: readability-identifier-naming.ConstantPrefix
+    value: 'k'
+  - key: readability-identifier-naming.MacroDefinitionCase
+    value: UPPER_CASE

@@ -1,0 +1,4 @@
+loadfile build/FourSeas_rev4_2048.elf
+r
+g
+qc

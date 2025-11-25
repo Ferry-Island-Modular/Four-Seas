@@ -1,0 +1,11 @@
+[submodule "DaisySP"]
+	path = DaisySP
+	url = https://github.com/electro-smith/DaisySP
+	branch = master
+[submodule "libDaisy"]
+	path = libDaisy
+	url = https://github.com/Ferry-Island-Modular/libDaisy
+	branch = fourseas-v5.4.0
+[submodule "stmlib"]
+	path = stmlib
+	url = https://github.com/pichenettes/stmlib
