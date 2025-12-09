@@ -31,8 +31,6 @@ Ui::Init(FourSeasHW*                             hw,
     settingsStorage_ = settingsStorage;
     appStateStorage_ = appStateStorage;
 
-    waves_loaded_ = false;
-
     Settings settings;
     settingsStorage_->Init(settings.Default());
 
@@ -1145,7 +1143,7 @@ bool Ui::isButtonDown(uint8_t idx)
 
 float ipiConverge(const float factors[], size_t idx, float freq, float spread)
 {
-    /*  
+    /*
         ratio_interpolated = (target_ratio / initial_ratio) ^ spread
 
         Calculation: ratio_interpolated = (2 / 1) ^ 0.5 = 2 ^ 0.5 ≈ 1.414 (square root of 2)
