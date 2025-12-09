@@ -307,7 +307,7 @@ class Ui
     uint8_t                bank_num_;
     AppState::SPREAD_TYPES spread_type_;
     bool                   lock_tuning_;
-    bool                   waves_loaded_;
+    bool                   waves_loaded_ = false;
 
 
     static constexpr std::array<std::array<LEDs, 3>, NUM_RGB_LEDS> bank_leds_
