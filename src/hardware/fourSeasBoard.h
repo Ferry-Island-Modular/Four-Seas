@@ -2,10 +2,9 @@
 
 #ifndef UNIT_TEST // for unit tests, a dummy implementation is provided below
 #include "stm32h7xx_hal.h"
-#endif // ifndef UNIT_TEST
-
 #include "daisy.h"
 #include "daisy_seed.h"
+#endif // ifndef UNIT_TEST
 
 #include "src/button.h"
 #include "src/analog_ctrl_24.h"
@@ -119,8 +118,8 @@ class FourSeasHW
     void   UpdateExtGPIO();
     uint32_t GetTick();
     uint32_t GetNow();
-    void InitWatchdog();
-    void RefreshWatchdog();
+    void     InitWatchdog();
+    void     RefreshWatchdog();
 
     daisy::SpiHandle::Result UpdateExtADC();
 
