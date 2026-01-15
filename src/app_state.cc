@@ -1,4 +1,3 @@
-#include "daisy.h"
 #include "app_state.h"
 
 using namespace fourseas;

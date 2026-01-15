@@ -1,7 +1,5 @@
 #pragma once
 
-#include "daisy.h"
-
 namespace fourseas
 {
 class AppState

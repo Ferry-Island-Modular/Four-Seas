@@ -32,8 +32,10 @@
 
 #include "stmlib/dsp/dsp.h"
 
-#include "src/ui.h"
 #include "src/constants.h"
+#include "src/params.h"
+#include "src/app_state.h"
+
 
 namespace fourseas
 {
